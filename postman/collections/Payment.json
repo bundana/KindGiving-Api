@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "d0c91830-e27b-4ccf-8ef4-f0c5c9a40373",
+		"name": "Payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "31699619-d0c91830-e27b-4ccf-8ef4-f0c5c9a40373"
+	},
+	"item": [
+		{
+			"name": "Hubtel",
+			"item": [
+				{
+					"name": "Direct USSD webhook",
+					"id": "4bd8b211-dbee-4eb3-8310-054ee1affe88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Message\": \"Success\",\r\n    \"Data\": {\r\n        \"Amount\": 0.8,\r\n        \"Charges\": 0.05,\r\n        \"AmountAfterCharges\": 0.8,\r\n        \"Description\": \"The Vodafone Cash payment has been approved and processed successfully \",\r\n        \"ClientReference\": \"KOGJcJ\",\r\n        \"TransactionId\": \"09f84e20a283942e807128e8c21d08d6\",\r\n        \"ExternalTransactionId\": \"2116938399\",\r\n        \"AmountCharged\": 0.85,\r\n        \"OrderId\": \"09f84e20a283942e807128e8c21d08d6\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kindgiving.org/v1/payments/webhooks/hubtel",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kindgiving",
+								"org"
+							],
+							"path": [
+								"v1",
+								"payments",
+								"webhooks",
+								"hubtel"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "ad939fee-a29f-413a-816f-b27c6bed8fa9"
+		}
+	]
+}

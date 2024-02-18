@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "a26724a0-d9fb-4280-8841-803287be9b19",
+		"name": "Users",
+		"description": "This endpoint retrieves user information based on the provided phone number or user ID.\n\n| Query Param | description |\n| --- | --- |\n| user_id | The ID of the user |\n| phone | The phone number of the user. |\n\nEither **phone** or **user_id** is required.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "31699619-a26724a0-d9fb-4280-8841-803287be9b19"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"id": "d66734a9-615b-4136-a8bf-4039ed897f81",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"0542345921\",\r\n    \"user_id\": \"3518691972\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.kindgiving.org/v1/users/profile",
+					"protocol": "https",
+					"host": [
+						"api",
+						"kindgiving",
+						"org"
+					],
+					"path": [
+						"v1",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "415235e9-4e23-44e4-98af-b29b6b07b52c",
+					"name": "Profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"0542345921\",\r\n    \"user_id\": \"3518691972\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kindgiving.org/v1/users/profile",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kindgiving",
+								"org"
+							],
+							"path": [
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"success\": true,\r\n    \"message\": \"User retrieved successfully\",\r\n    \"data\": {\r\n        \"full_name\": \"Agent Capo\",\r\n        \"email\": \"1@gmail.com\",\r\n        \"phone\": \"0542345921\",\r\n        \"avatar\": \"http://donation-dash.test/img/favicon.png\",\r\n        \"role\": \"agent\"\r\n    }\r\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cd10cb71-2b74-4598-9473-911c903b3c12",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6f6f197f-5b95-46d9-82c4-0a7f33d32c8d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "be83b701-684a-49b0-b68f-3f773ad8c538",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

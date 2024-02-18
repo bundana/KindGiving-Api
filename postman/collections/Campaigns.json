@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "ee77581b-eae7-4f42-827a-32c2931f42dc",
+		"name": "Campaigns",
+		"description": "This Collect includes endpoints to create manage donations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "31699619-ee77581b-eae7-4f42-827a-32c2931f42dc"
+	},
+	"item": [
+		{
+			"name": "Donations",
+			"item": [
+				{
+					"name": "Single Donation",
+					"id": "28cf6a66-9a90-472e-b57b-d2d8b325f9aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"donation_id\": \"JhbH5k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kindgiving.org/v1/campaigns/donations/single?donation_id=JhbH5k",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kindgiving",
+								"org"
+							],
+							"path": [
+								"v1",
+								"campaigns",
+								"donations",
+								"single"
+							],
+							"query": [
+								{
+									"key": "donation_id",
+									"value": "JhbH5k"
+								}
+							]
+						},
+						"description": "This endpoint retrieves details about a single donation from a campaign. You can retrieve information such as the donation amount, donor details, and donation date.\n\n- Query Parameters:\n    - `donation_id`: The ID of the donation to retrieve. Example: `JhbH5k`"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Donation",
+					"id": "24bc9b87-0b47-4ca3-a102-3a7805ab6bd2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creator\": \"3518691972\",\r\n    \"campaign_id\": \"tc4Q\",\r\n    \"donor_contact\": \"233542345921\",\r\n    \"amount\": \"50\",\r\n    \"donor_name\": \"John Doe\",\r\n    \"email_address\": \"kenyonamethyst@gmail.com\",\r\n    \"donation_method\": \"web\",\r\n    \"agent\": \"337988512\",\r\n    \"donor_public_name\": null,\r\n    \"tip\": \"0\",\r\n    \"hide_donor\": \"no\",\r\n    \"comment\": null,\r\n    \"country\": \"Ghana\",\r\n    \"status\": \"paid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kindgiving.org/v1/campaigns/donations/create",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kindgiving",
+								"org"
+							],
+							"path": [
+								"v1",
+								"campaigns",
+								"donations",
+								"create"
+							]
+						},
+						"description": "Create a new donation.\n\n- `creator`: The ID of the user or entity creating the donation.\n    \n- `campaign_id`: The ID of the campaign to which the donation is being made.\n    \n- `donor_contact`: The contact information of the donor (e.g., phone number).\n    \n- `amount`: The amount of the donation.\n    \n- `donor_name`: The name of the donor.\n    \n- `email_address`: The email address of the donor.\n    \n- `donation_method`: The method used for the donation (e.g., web, mobile app).\n    \n- `agent`: The ID of the agent processing the donation.\n    \n- `donor_public_name`: The public name of the donor (if provided).\n    \n- `tip`: Any additional amount added as a tip.\n    \n- `hide_donor`: Indicates whether the donor's information should be hidden (yes or no).\n    \n- `comment`: Any comment or message from the donor.\n    \n- `country`: The country of the donor."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Donation with Payment",
+					"id": "d681115d-3d60-43dd-b935-5177133aa51d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creator\": \"3518691972\",\r\n    \"campaign_id\": \"tc4Q\",\r\n    \"donor_contact\": \"233542345921\",\r\n    \"amount\": \"0.1\",\r\n    \"networkProvider\": \"mtn\",\r\n    \"donor_name\": \"John Doe\",\r\n    \"email_address\": \"kenyonamethyst@gmail.com\",\r\n    \"donation_method\": \"web\",\r\n    \"agent\": \"337988512\",\r\n    \"donor_public_name\": null,\r\n    \"tip\": \"0\",\r\n    \"hide_donor\": \"no\",\r\n    \"comment\": null,\r\n    \"country\": \"Ghana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.kindgiving.org/v1/campaigns/donations/create/payment",
+							"protocol": "https",
+							"host": [
+								"api",
+								"kindgiving",
+								"org"
+							],
+							"path": [
+								"v1",
+								"campaigns",
+								"donations",
+								"create",
+								"payment"
+							]
+						},
+						"description": "- `creator`: The ID of the user or entity creating the donation.\n- `campaign_id`: The ID of the campaign to which the donation is being made.\n- `donor_contact`: The contact information of the donor (e.g., phone number).\n- `amount`: The amount of the donation.\n- `networkProvider`: The network provider of the donor's phone number.\n- `donor_name`: The name of the donor.\n- `email_address`: The email address of the donor.\n- `donation_method`: The method used for the donation (e.g., web, mobile app).\n- `agent`: The ID of the agent processing the donation.\n- `donor_public_name`: The public name of the donor (if provided).\n- `tip`: Any additional amount added as a tip.\n- `hide_donor`: Indicates whether the donor's information should be hidden (yes or no).\n- `comment`: Any comment or message from the donor.\n- `country`: The country of the donor."
+					},
+					"response": []
+				}
+			],
+			"id": "e61c48ff-6845-4964-9eee-b5aff4977346",
+			"description": "Endpoint to create Donation, collect payment via ussd promt"
+		},
+		{
+			"name": "Campaign Info",
+			"id": "175bb681-c706-40b0-8b81-efd2b9bd27a3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creator\": \"3518691972\",\r\n    \"campaign_id\": \"tc4Q\", \r\n    \"donor_contact\": \"233542345921\",\r\n    \"amount\": \"50\",\r\n    \"networkProvider\" : \"mtn\",\r\n    \"donor_name\": \"John Doe\",\r\n    \"email_address\": \"kenyonamethyst@gmail.com\",\r\n    \"donation_method\": \"web\",\r\n    \"agent\": \"337988512\",\r\n    \"donor_public_name\": null,\r\n    \"tip\": \"0\",\r\n    \"hide_donor\": \"no\",\r\n    \"comment\": null,\r\n    \"country\": \"Ghana\",\r\n    \"status\": \"paid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/v1/campaigns/info?campaign_id=tc4Q",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"campaigns",
+						"info"
+					],
+					"query": [
+						{
+							"key": "campaign_id",
+							"value": "tc4Q"
+						}
+					]
+				},
+				"description": "## Campaign Info\n\nRetrieve information about a specific campaign.\n \n- Query Parameters:\n  - `campaign_id`: The ID of the campaign to retrieve information about. Example: `tc4Q`\n "
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4d30b5a9-3a72-4425-bc64-6c1e514eca8c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "34898e49-41d3-4494-a6a9-ff82a63cf86c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b3993d4a-eb3f-4358-b4b6-2a1ebf0fe850",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}

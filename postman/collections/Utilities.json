@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "bc75323c-de74-459d-87ad-c2af0e169d02",
+		"name": "Utilities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "31699619-bc75323c-de74-459d-87ad-c2af0e169d02"
+	},
+	"item": [
+		{
+			"name": "Url Shortener",
+			"id": "1e5900fb-3e87-489f-b61c-4a657238f386",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://www.linkedin.com/notifications/?filter=all\",\r\n    \"activateAt\": \"\",\r\n    \"deactivateAt\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.kindgiving.org/v1/utilites/shorturl",
+					"protocol": "https",
+					"host": [
+						"api",
+						"kindgiving",
+						"org"
+					],
+					"path": [
+						"v1",
+						"utilites",
+						"shorturl"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f9cc5d07-06be-4921-8617-a09826f4c4e6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fbd55e1a-b282-4130-a542-5c344f28e404",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
