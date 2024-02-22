@@ -20,7 +20,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Message\": \"Success\",\r\n    \"Data\": {\r\n        \"Amount\": 0.8,\r\n        \"Charges\": 0.05,\r\n        \"AmountAfterCharges\": 0.8,\r\n        \"Description\": \"The Vodafone Cash payment has been approved and processed successfully \",\r\n        \"ClientReference\": \"KOGJcJ\",\r\n        \"TransactionId\": \"09f84e20a283942e807128e8c21d08d6\",\r\n        \"ExternalTransactionId\": \"2116938399\",\r\n        \"AmountCharged\": 0.85,\r\n        \"OrderId\": \"09f84e20a283942e807128e8c21d08d6\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Message\": \"Success\",\r\n    \"Data\": {\r\n        \"Amount\": 0.8,\r\n        \"Charges\": 0.05,\r\n        \"AmountAfterCharges\": 0.8,\r\n        \"Description\": \"The Vodafone Cash payment has been approved and processed successfully \",\r\n        \"ClientReference\": \"uaGWLtFJ\",\r\n        \"TransactionId\": \"09f84e20a283942e807128e8c21d08d6\",\r\n        \"ExternalTransactionId\": \"2116938399\",\r\n        \"AmountCharged\": 0.85,\r\n        \"OrderId\": \"09f84e20a283942e807128e8c21d08d6\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -28,7 +28,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.kindgiving.org/v1/payments/webhooks/hubtel",
+							"raw": "https://api.kindgiving.org/v1/payments/webhooks/hubtel/ussd",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -39,6 +39,82 @@
 								"v1",
 								"payments",
 								"webhooks",
+								"hubtel",
+								"ussd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Online Checkout Webhook",
+					"id": "0deaf616-1dfc-46a9-8ef3-95fa59b762ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Status\": \"Success\",\r\n    \"Data\": {\r\n        \"CheckoutId\": \"59e2fbbff4e443b98e09346881ac7e9a\",\r\n        \"SalesInvoiceId\": \"e96ccfb4746045bba13f425bd573a31c\",\r\n        \"ClientReference\": \"B4tqcSiP\",\r\n        \"Status\": \"Success\",\r\n        \"Amount\": 0.5,\r\n        \"CustomerPhoneNumber\": \"233242825109\",\r\n        \"PaymentDetails\": {\r\n            \"MobileMoneyNumber\": \"233242825109\",\r\n            \"PaymentType\": \"mobilemoney\",\r\n            \"Channel\": \"mtn-gh\"\r\n        },\r\n        \"Description\": \"The MTN Mobile Money payment has been approved and processed successfully.\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/v1/payments/webhooks/hubtel/online-checkout",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"payments",
+								"webhooks",
+								"hubtel",
+								"online-checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prepaid Top",
+					"id": "f940e52e-84bd-4ce4-963f-e4c43723a1ae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Message\": \"success\",\r\n    \"Data\": {\r\n        \"Amount\": 0.1,\r\n        \"Charges\": 0,\r\n        \"AmountAfterCharges\": 0.1,\r\n        \"Description\": \"The MTN Mobile Money payment has been approved and processed successfully.\",\r\n        \"ClientReference\": \"KGTJPS9C4DQD3\",\r\n        \"TransactionId\": \"53eb5f227d6e4b8c95de2ccea99fb313\",\r\n        \"ExternalTransactionId\": \"34844584871\",\r\n        \"AmountCharged\": 0.1,\r\n        \"OrderId\": \"53eb5f227d6e4b8c95de2ccea99fb313\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/v1/payment/prepaid-topup/hubtel",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"payment",
+								"prepaid-topup",
 								"hubtel"
 							]
 						}
@@ -47,6 +123,81 @@
 				}
 			],
 			"id": "ad939fee-a29f-413a-816f-b27c6bed8fa9"
+		},
+		{
+			"name": "127.0.0.1:8000/v1/payments/webhooks/hubtel/ussd",
+			"id": "c2c19f1b-da19-47b9-a5e2-31a06f859782",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Message\": \"success\",\r\n    \"Data\": {\r\n        \"Amount\": 0.1,\r\n        \"Charges\": 0,\r\n        \"AmountAfterCharges\": 0.1,\r\n        \"Description\": \"The MTN Mobile Money payment has been approved and processed successfully.\",\r\n        \"ClientReference\": \"phO94F\",\r\n        \"TransactionId\": \"53eb5f227d6e4b8c95de2ccea99fb313\",\r\n        \"ExternalTransactionId\": \"34844584871\",\r\n        \"AmountCharged\": 0.1,\r\n        \"OrderId\": \"53eb5f227d6e4b8c95de2ccea99fb313\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/v1/payments/webhooks/hubtel/ussd",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"payments",
+						"webhooks",
+						"hubtel",
+						"ussd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.kindgiving.org/v1/payments/webhooks/hubtel/online-checkout",
+			"id": "f5b0f754-856a-4dec-a29a-c1bc2c1aaace",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ResponseCode\": \"0000\",\r\n    \"Message\": \"success\",\r\n    \"Data\": {\r\n        \"Amount\": 0.1,\r\n        \"Charges\": 0,\r\n        \"AmountAfterCharges\": 0.1,\r\n        \"Description\": \"The MTN Mobile Money payment has been approved and processed successfully.\",\r\n        \"ClientReference\": \"83DLavKu6kUfFUjKqeDZR6Q8\",\r\n        \"TransactionId\": \"53eb5f227d6e4b8c95de2ccea99fb313\",\r\n        \"ExternalTransactionId\": \"34844584871\",\r\n        \"AmountCharged\": 0.1,\r\n        \"OrderId\": \"53eb5f227d6e4b8c95de2ccea99fb313\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.kindgiving.org/v1/payments/webhooks/hubtel/online-checkout",
+					"protocol": "https",
+					"host": [
+						"api",
+						"kindgiving",
+						"org"
+					],
+					"path": [
+						"v1",
+						"payments",
+						"webhooks",
+						"hubtel",
+						"online-checkout"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
