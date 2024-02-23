@@ -17,7 +17,6 @@ files[] = {"id":"31699619-bc75323c-de74-459d-87ad-c2af0e169d02","path":"Utilitie
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
-files[] = {"path":"index.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3

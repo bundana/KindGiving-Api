@@ -8,8 +8,8 @@
 	},
 	"item": [
 		{
-			"name": "Profile",
-			"id": "d66734a9-615b-4136-a8bf-4039ed897f81",
+			"name": "Retrieve user",
+			"id": "85f7eba2-9a75-4a20-b811-38850ec1e7cf",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -40,43 +40,7 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"id": "415235e9-4e23-44e4-98af-b29b6b07b52c",
-					"name": "Profile",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"phone\": \"0542345921\",\r\n    \"user_id\": \"3518691972\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.kindgiving.org/v1/users/profile",
-							"protocol": "https",
-							"host": [
-								"api",
-								"kindgiving",
-								"org"
-							],
-							"path": [
-								"v1",
-								"users",
-								"profile"
-							]
-						}
-					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"body": "{\r\n    \"success\": true,\r\n    \"message\": \"User retrieved successfully\",\r\n    \"data\": {\r\n        \"full_name\": \"Agent Capo\",\r\n        \"email\": \"1@gmail.com\",\r\n        \"phone\": \"0542345921\",\r\n        \"avatar\": \"http://donation-dash.test/img/favicon.png\",\r\n        \"role\": \"agent\"\r\n    }\r\n}"
-				}
-			]
+			"response": []
 		}
 	],
 	"auth": {
@@ -114,6 +78,7 @@
 	"variable": [
 		{
 			"id": "be83b701-684a-49b0-b68f-3f773ad8c538",
+			"key": "be83b701-684a-49b0-b68f-3f773ad8c538",
 			"value": "",
 			"type": "string"
 		}
